@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ebook-272711",
+  "private_key_id": "9039089b166f7b6fd9d6e0584441c3111eaf7e54",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCjgWsAuEnPLBTK\n9K+D4YcLaK0x7eVs5eEjeV6y8o9Kl8bt8+oI1QlvzI/vWsSEhC2yhuChKV14YsSp\ncwK7mgUvEIA4aEMMdrqQRIbTPyq+rkjFwpg4vGHFl9GyIJoBVTsvhPQ/ZChHyvji\nTIxu/RZ3sTaDGRcDKZqjKoLBFYedUP/JyrV69mtazbLtIkn15i5v4NOoYc+djx5w\nU0Aliwhcjk4q8clpbdcFcf/AEWrpMHViEKH2SGMMlg24oIPLW3lZLNIVeOXSY6iC\noiwDYXtPyra3+MDAhla/OH59Fxe6ccruCg2KKUQ7OP3zl8CeB10G4CpfTMzk416a\nbKLAKxa7AgMBAAECggEADQxQ67fJPB06c4/fSdj/m+t4ltlzS6N0ug3/fqxYvw0p\ntOeYL6hAnolmmyVVNXYO54ZX+sSATxEivJsPBsWd0Emy0c2QPDhlXwn48HbEBH+I\nEzAaUbzG2Kvq8hoj8CNLG9myXDSz+ja6ceTF+D1+Q4MC5Kdl7LyvOII1+Q6syeMC\nEheTxZ+BPELp9Z25aEiGh/ZkjGsAojFw9d0LylSEH9xGMvdr9YQT/SeG42h1cRcX\ny3e94s0zQ39a0TTW0a3nnbzgHUlwIEvXyrDb6Q62/sysIrpFFzGmL2b1AgS/VPvI\n+2cxLPHiPSKUDqoD0LUrrnj3qmeprL53IX0pJm9BYQKBgQDi+vmAJFdC38B9GUa1\n92VKSJLn2f0w2ZtsPhU+Nj+zRCBczC06hdC+dfXHmqwIT7fjZhBLjkkRlwWeMVe1\nALudOxdgfZjwLqLo/IivYRzcmnN34R4YjmIGY2Ix6aSTUB7VCaCUnzYMFatxodvQ\nn7QUCQl5BXNz2oi8Bcw96n7xgwKBgQC4aOyHOB0C5lbRXAwuxL9oSk5itgnqk69n\n1CnChzcLp4j1ne4FZWxFCw38SQ/6Q33QOCHyn3OdyNgUpx4foPufooOVtY85M5CU\nISLbAqpuE9PSfzd41w/JNbMJRezSc8PvX3WuXNmcPsUxaQevo9IK2DbrJAnmlEig\n0hdnsYdYaQKBgBHdOuHQ+mUzAw1VffE4ZWpxR86jo3/CwK7GPBnHX0AWro1fLHgc\nrA8xbYSmMb/9tjVZhRLNQgb2YeTPcV23jwyS6AYaHH1azkuUBJX5CLJ8HXZj62B3\nZFOoYsQW5XMKrUKLHW5VEYXl9rZczNYgm6WwCGTT/wAxRO23bxm4aQFNAoGAK8IB\n9igTgj+j9DPSVDqtbJLNPNETU01N/uYyLo2lOye68QVTmIYzhcKUw/uWRf1D2men\nbon1hkhFNcld9YVej8ehT6HwZVNeCDhArBVa2Zns1nMHd64Yedc7L4UfJ+T+ZkuR\nghlYLaIbapkQkNXfnmElzvATRVqETVzs3tcaVZkCgYB8v+lQcD8NSydp6dnMPgIC\nZjieMD2fvsDDJaNCaOM4Jkv5CHAdijw+nx4AT9pecKTpNIFeh7i3l9RJ+HzcdDg7\n/+HcMcub/qgVkz3bSZJQbIcvyuC7gH+j5yaAEbZ14MVySP159y4njmI0zkDRhuaz\nqt/QLyMyYylblmTIoOvbRg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "ebook-952@ebook-272711.iam.gserviceaccount.com",
+  "client_id": "116625655551361363448",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ebook-952%40ebook-272711.iam.gserviceaccount.com"
+}
