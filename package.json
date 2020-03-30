@@ -1,0 +1,28 @@
+{
+  "name": "ebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sky-builder/ebook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sky-builder/ebook/issues"
+  },
+  "homepage": "https://github.com/sky-builder/ebook#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
