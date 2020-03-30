@@ -1,0 +1,53 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+
+
+@import "tailwindcss/utilities";
+
+body {
+  background-color: #ffffff;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.book-list {
+  height: 220px;
+}
+
+.book-list-item__intro {
+  height: calc(24px * 3);
+  position: relative;
+  overflow: hidden;
+}
+.book-list-item__intro::after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 1.2em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
+
+html,body {
+  height: 100%;
+}
+
+.link {
+  @apply text-blue-500;
+}
+.link:hover {
+  @apply underline;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+}

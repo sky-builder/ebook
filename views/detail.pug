@@ -1,0 +1,26 @@
+extends layout.pug
+block content
+  div(class="flex flex-col p-4 shadow-lg book-detail bg-white")
+    div(class="flex flex-row") 
+      img(src=book.coverUrl width="150" height="200" class="self-start")
+      div(class="flex flex-col ml-2")
+        h1(class="text-2xl")= book.name
+        p
+          span(class="text-gray-600") 作者:&nbsp;
+          span #{book.author}
+        p
+          span(class="text-gray-600") 出版社:&nbsp;
+          span #{book.publisher}
+        p 
+          span(class="text-gray-600") 出版年:&nbsp;
+          span #{book.publishDate}
+    div(class="flex-1")
+      h2(class="mt-4 text-gray-600") 内容简介
+      p= book.intro
+      h2(class="mt-4 text-gray-600") 作者简介
+      p= book.authorIntro
+      h2(class="mt-4 text-gray-600") 下载链接
+      each item in book.downloadList
+        span
+          a(href=item.url target="_blank" class="link")= item.label
+          span(class="inline-block ml-2")= '提取码: ' + item.secret
