@@ -1,0 +1,13 @@
+if: branch = ci_test
+language: node_js
+node_js: '10.16'
+before_install:
+- openssl aes-256-cbc -K $encrypted_9401163fb82b_key -iv $encrypted_9401163fb82b_iv -in aliyun.pem.enc -out aliyun.pem -d
+- eval `ssh-agent -s`
+- chmod 600 ./aliyun.pem
+- ssh-add ./aliyun.pem
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: bash deploy.sh
+  on: ci_test
