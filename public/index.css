@@ -2,8 +2,6 @@
 
 @import "tailwindcss/components";
 
-
-
 @import "tailwindcss/utilities";
 
 body {
@@ -11,8 +9,12 @@ body {
 background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
-.book-list {
+
+.book-list-item {
   height: 220px;
+}
+.book-list-item + .book-list-item {
+  @apply mt-2;
 }
 
 .book-list-item__intro {
@@ -50,4 +52,12 @@ html,body {
 .book-detail {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.pager {
+  display: flex;
+  flex-direction: row;
+}
+.pager__link + .pager__link {
+  @apply ml-2;
 }

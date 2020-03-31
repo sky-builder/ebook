@@ -13952,8 +13952,12 @@ body {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-.book-list {
+.book-list-item {
   height: 220px;
+}
+
+.book-list-item + .book-list-item {
+  margin-top: 0.5rem;
 }
 
 .book-list-item__intro {
@@ -13993,6 +13997,15 @@ html,body {
 .book-detail {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.pager {
+  display: flex;
+  flex-direction: row;
+}
+
+.pager__link + .pager__link {
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 640px) {

@@ -7,10 +7,10 @@ html(lang="en")
     title Document
   body
     div(class="app flex flex-col h-full")
-      div(class="header text-6xl opacity-50 py-4 hover:opacity-75")
-        a(href="/") 在线电子书
-        form(action="/")
-          input(type="text" name="keyword")
+      div(class="header flex flex-row")
+        a(href="/" class="text-6xl opacity-50 py-4 hover:opacity-75") 在线电子书
+        form(action="/" class="ml-auto self-center")
+          input(type="text" name="keyword" value=q class="px-4 py-2 text-lg border border-gray-300 rounded" placeholder="搜索")
       div(class="body flex-1")
         block content
       div(class="footer text-sm text-center")
