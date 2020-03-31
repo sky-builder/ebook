@@ -35,19 +35,26 @@ const PROT = config.get("port");
 
 app.set("view engine", "pug");
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded())
 
 app.get("/", (req, res) => {
-  let books = []
-  booksRef.get()
+  let { keyword } = req.query || {};
+  let query;
+  if (keyword) {
+    query = booksRef.where('name', '==', keyword).get();
+  } else {
+    query = booksRef.get();
+  }
+  query
   .then((snapshot) => {
     snapshot.forEach(doc => {
+      let books = []
       books.push({
         ...doc.data(),
         id: doc.id
       });
+      res.render('index', {books})
     })
-    console.log(books)
-    res.render('index', {books})
   })
   .catch((err) => {
     console.log('Error getting documents', err);
