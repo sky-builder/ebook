@@ -6,12 +6,12 @@
 
 body {
   background-color: #ffffff;
-background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("/low-contrast-linen.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .book-list-item {
-  height: 220px;
+  height: calc(200px + 2rem);
 }
 .book-list-item + .book-list-item {
   @apply mt-2;
@@ -58,6 +58,12 @@ html,body {
   display: flex;
   flex-direction: row;
 }
+.pager__link {
+  @apply px-2;
+}
 .pager__link + .pager__link {
   @apply ml-2;
+}
+.pager__link:hover {
+  @apply bg-blue-100;
 }

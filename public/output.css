@@ -13948,12 +13948,12 @@ video {
 
 body {
   background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+  background-image: url("/low-contrast-linen.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .book-list-item {
-  height: 220px;
+  height: calc(200px + 2rem);
 }
 
 .book-list-item + .book-list-item {
@@ -14004,8 +14004,17 @@ html,body {
   flex-direction: row;
 }
 
+.pager__link {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pager__link + .pager__link {
   margin-left: 0.5rem;
+}
+
+.pager__link:hover {
+  background-color: #ebf8ff;
 }
 
 @media (min-width: 640px) {

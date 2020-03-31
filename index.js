@@ -23,10 +23,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded())
 
 app.get("/", async (req, res) => {
-  let { q, p } = req.query || {};
+  let { q, p } = req.query;
   let s = PAGE_SIZE;
   p = parseInt(p);
   if (isNaN(p)) p = 1;
+  q = q || '';
   let query;
   if (q) {
     query = booksRef.where('name', '==', q).get()
@@ -43,7 +44,6 @@ app.get("/", async (req, res) => {
   let totalQuery = booksRef.doc(TOTAL_DOC_ID).get()
   Promise.all([query, totalQuery])
   .then(data => {
-    console.log('data', data);
     let books = []
     let [docs, totalDoc] = data;
     docs.forEach(doc => {
@@ -53,23 +53,16 @@ app.get("/", async (req, res) => {
       })
     })
     let totalCount = totalDoc.data().total;
+    totalCount = q ? 1 : totalCount;
     let payload = {
       books: books,
       q: q,
       p: p,
       s: s,
-      totalPage: totalCount % s === 0 ? parseInt(totalCount / s) : parseInt(totalCount / s) + 1
+      totalPage: totalCount % s === 0 ? parseInt(totalCount / s) : parseInt(totalCount / s) + 1,
+      title: '蜗牛书屋'
     }
     res.render('index', payload);
-  })
-  query
-  .then((snapshot) => {
-    snapshot.forEach(doc => {
-      books.push({
-        ...doc.data(),
-        id: doc.id
-      });
-    })
   })
   .catch((err) => {
     console.log('Error getting documents', err);
@@ -82,7 +75,11 @@ app.get('/books/:id', (req, res) => {
   .then((docRef) => {
     book = docRef.data();
     book.id = docRef.id;
-    res.render('detail', {book})
+    let payload = {
+      book: book,
+      title: '蜗牛书屋 | ' + book.name
+    }
+    res.render('detail', payload)
   })
   .catch(err => {
     console.log(err)
