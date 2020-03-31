@@ -43,11 +43,12 @@ app.get("/", async (req, res) => {
   let totalQuery = booksRef.doc(TOTAL_DOC_ID).get()
   Promise.all([query, totalQuery])
   .then(data => {
+    console.log('data', data);
     let books = []
     let [docs, totalDoc] = data;
     docs.forEach(doc => {
       books.push({
-        ...doc,data(),
+        ...doc.data(),
         id: doc.id,
       })
     })
@@ -57,9 +58,9 @@ app.get("/", async (req, res) => {
       q: q,
       p: p,
       s: s,
-      totalPage: 
+      totalPage: totalCount % s === 0 ? parseInt(totalCount / s) : parseInt(totalCount / s) + 1
     }
-    res.render('index', {books, q: q, totalPage: 2, s: 2, p: p});
+    res.render('index', payload);
   })
   query
   .then((snapshot) => {
