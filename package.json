@@ -6,7 +6,9 @@
   "scripts": {
     "test": "exit 0",
     "dev": "nodemon index.js",
-    "style": "npx tailwindcss build ./public/index.css -o ./public/output.css"
+    "build-style": "npx tailwindcss build ./public/index.css -o ./public/output.css",
+    "remove-duplicated": "node remove-duplicated.js",
+    "update-total": "node update-total.js"
   },
   "repository": {
     "type": "git",
