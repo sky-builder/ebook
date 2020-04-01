@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="referrer", content="no-referrer")
+    link(rel="stylesheet", href="/output.css")
+    title= title
+  body
+    div(class="app flex flex-col h-full")
+      div(class="header flex flex-row")
+        a(href="/" class="text-6xl opacity-50 py-4 hover:opacity-75") 🐌蜗牛书屋
+        form(action="/" class="ml-auto self-center")
+          input(type="text" name="q" value=q class="px-4 py-2 text-lg border border-gray-300 rounded" placeholder="搜索")
+      div(class="body flex-1")
+        block content
+      div(class="footer text-sm text-center")
+        span &copy;蜗牛书屋 ebook.magisk.tech

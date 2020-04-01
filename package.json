@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "exit 0",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build-style": "npx tailwindcss build ./public/index.css -o ./public/output.css",
+    "remove-duplicated": "node remove-duplicated.js",
+    "update-total": "node update-total.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,10 @@
   "dependencies": {
     "config": "^3.3.1",
     "express": "^4.17.1",
-    "pug": "^2.0.4"
+    "firebase": "^7.13.1",
+    "firebase-admin": "^8.10.0",
+    "pug": "^2.0.4",
+    "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
